@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <title>Exotic Biryani</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#registration">Registration</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 style="color: coral;"><b>Exotic Biryani</b></h1>
+    </header>
+
+    <section id="home" class="background-section">
+        <h2>Welcome to Exotic Biryani</h2>
+        <p>Indulge in the flavors of our delectable biryanis.</p>
+        <img src="7.jpg" alt="Exotic Biryani" class="foreground-image">
+    </section>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        <table class="menu-table">
+            <tr align="center">
+                <th>Image</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Add to Cart</th>
+            </tr>
+            <tr align="center">
+                <td><img src="1.jpg" width="100"></td>
+                <td>Chicken Biryani</td>
+                <td>₹110</td>
+                <td><button onclick="addToCart('Chicken Biryani', 110)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="2.jpg" width="100"></td>
+                <td>Chicken 65 Biryani</td>
+                <td>₹210</td>
+                <td><button onclick="addToCart('Chicken 65 Biryani', 210)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="4.jpg" width="100"></td>
+                <td>Egg Biryani</td>
+                <td>₹150</td>
+                <td><button onclick="addToCart('Egg Biryani', 150)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="vb.jpg" width="100"></td>
+                <td>Veg Biryani</td>
+                <td>₹180</td>
+                <td><button onclick="addToCart('Veg Biryani', 180)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="pb.jpg" width="100"></td>
+                <td>Panner Biryani</td>
+                <td>₹200</td>
+                <td><button onclick="addToCart('Panner Biryani', 200)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="mb.png" width="100"></td>
+                <td>Mushroom Biryani</td>
+                <td>₹190</td>
+                <td><button onclick="addToCart('Mushroom Biryani', 190)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="wb.png" width="100"></td>
+                <td>Water Bottle</td>
+                <td>₹20</td>
+                <td><button onclick="addToCart('Water Bottle', 20)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="coke.png" width="100"></td>
+                <td>Coka Cola</td>
+                <td>₹22</td>
+                <td><button onclick="addToCart('Coka Cola', 22)">Click Here</button></td>
+            </tr>
+            <tr align="center">
+                <td><img src="peps.jpg" width="100"></td>
+                <td>Pepsi</td>
+                <td>₹20</td>
+                <td><button onclick="addToCart('Pepsi', 20)">Click Here</button></td>
+            </tr>
+          </table>
+    </section>
+    
+
+<section id="cart">
+    <h2>Cart</h2>
+    <table class="cart-table">
+        <tr>
+            <th>Item</th>
+            <th>Price</th>
+        </tr>
+    </table>
+</section>
+
+<h2>&emsp;&emsp;Login</h2>
+<section id="login" class="login-container">
+    
+    <form action="process_login.php" method="POST">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+    <p>New user? <a href="register.html">Register here</a></p>
+</section>
+
+
+<h2>&emsp;&emsp;Registration</h2>
+<div class="registration-container">
+    
+    <form action="process_registration.php" method="POST">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Register">
+        </div>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+</div>
+
+<h2>&emsp;&emsp;Contact Us</h2>
+<div class="contact-container">
+    
+    <p>If you have any questions or feedback, please feel free to get in touch with us.</p>
+
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+    <footer>
+        <p>&copy;2023 Exotic Biryani. All rights reserved.</p>
+    </footer>
+</body>
+</html>
